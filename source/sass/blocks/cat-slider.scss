@@ -1,0 +1,123 @@
+.cat-slider {
+  position: relative;
+
+  display: flex;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 25px;
+    left: 53.5%;
+
+    justify-content: space-between;
+    z-index: 2;
+  }
+}
+
+.cat-slider__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.cat-slider__before {
+  position: relative;
+
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.cat-slider__after {
+  position: absolute;
+  z-index: 1;
+
+  height: 100%;
+
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.cat-slider__range {
+  position: absolute;
+  left: calc(50% - 2px);
+  z-index: 2;
+
+  width: 4px;
+  height: 100%;
+
+  background-color: $color-dim-gray;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: $color-apple;
+    cursor: pointer;
+
+    .cat-slider__range-button {
+      box-shadow: inset 0 0 0 2px $color-apple;
+      cursor: pointer;
+    }
+
+    .cat-slider__range-button::before,
+    .cat-slider__range-button::after {
+      border-left-color: $color-apple;
+      cursor: pointer;
+    }
+  }
+
+  &:active {
+    background-color: rgba($color-limeade, 0.6);
+
+    .cat-slider__range-button {
+      box-shadow: inset 0 0 0 2px rgba($color-limeade, 0.6);
+    }
+
+    .cat-slider__range-button::before,
+    .cat-slider__range-button::after {
+      border-left-color: rgba($color-limeade, 0.6);
+    }
+  }
+}
+
+.cat-slider__range-button {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -18px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: $color-white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px $color-dim-gray;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 8px;
+
+    width: 0;
+    height: 0;
+
+    background-color: $color-transparent;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 8px solid $color-dim-gray;
+  }
+
+  &::before {
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    left: calc(50% + 4px);
+  }
+}

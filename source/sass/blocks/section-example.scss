@@ -1,0 +1,259 @@
+.section-example {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  padding: 25px 0 40px;
+
+  background-color: $color-whisper-light;
+
+  @media (min-width: $tablet-width) {
+    padding: 43px 0 101px;
+
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 65px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 57%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background-color: $color-white-smoke;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      background-color: $color-white-smoke;
+      width: 100vw;
+      height: calc(100% - 26px);
+      left: 50%;
+      top: 26px;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+.section-example__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.section-example__header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $color-white;
+      width: 100vw;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+.section-example__content {
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 102px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+    padding-bottom: 0;
+  }
+}
+
+.section-example__list {
+  display: grid;
+  margin: 0 0 16px;
+  padding: 0;
+
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    gap: 42px;
+    grid-template-columns: 162px 162px;
+  }
+}
+
+.section-example__title {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 650px;
+    margin-bottom: 76px;
+  }
+}
+
+.section-example__description {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
+    margin-bottom: 54px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 436px;
+    margin-bottom: 69px;
+    padding-top: 71px;
+  }
+}
+
+.section-example__amount-info {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 66px;
+  }
+}
+
+.section-example__item {
+  position: relative;
+}
+
+.section-example__count {
+  padding: 15px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 1px solid $color-very-light-grey;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.section-example__count-info {
+  position: relative;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+
+  width: min-content;
+  margin-top: -12px;
+  padding: 3px 13px;
+
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $ff-lato;
+  text-align: center;
+  color: $color-charcoal;
+
+  background-color: $color-whisper-light;
+  transform: translateX(-100%);
+
+  @media (min-width: $tablet-width) {
+    left: 25%;
+
+    width: max-content;
+    max-width: 137px;
+    margin-top: -20px;
+    padding: 0 5px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $color-white;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-white-smoke;
+  }
+}
+
+.section-example__amount {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    margin-top: 57px;
+    padding: 0;
+
+    text-align: start;
+  }
+}
+
+.section-example__cost {
+  min-width: 90px;
+}
+
+.section-example__block {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

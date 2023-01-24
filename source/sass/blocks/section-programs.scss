@@ -1,0 +1,245 @@
+.section-programs {
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+    padding-bottom: 73px;
+  }
+}
+
+.section-programs__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 20px 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-programs__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+  padding: 20px;
+
+  background-color: $color-white-smoke;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    padding: 67px 62px 57px 52px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      padding: 67px 55px 61px 52px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-apple;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 92px;
+      right: 61px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--slim {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 29px;
+
+      width: 36px;
+      height: 50px;
+
+      background-image: url("../img/background/cat-slim.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @media (min-width: $tablet-width) {
+        top: 81px;
+        right: 92px;
+        left: auto;
+
+        width: 140px;
+        height: 194px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 41px;
+        left: 67px;
+
+        width: 70px;
+        height: 97px;
+      }
+    }
+  }
+
+  &--pro {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 13px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../img/background/cat-pro.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @media (min-width: $tablet-width) {
+        top: 135px;
+        right: 28px;
+        left: auto;
+
+        width: 268px;
+        height: 112px;
+
+        background-size: 268px 112px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 67px;
+        left: 33px;
+
+        width: 134px;
+        height: 56px;
+
+        background-size: 134px 56px;
+      }
+    }
+  }
+}
+
+.section-programs__title {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0 0 29px 71px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 400px;
+    padding: 0;
+    padding-bottom: 24px;
+
+    font-size: 36px;
+    line-height: 36px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 73px;
+    padding-left: 162px;
+  }
+}
+
+.section-programs__description {
+  margin: 0;
+  margin-bottom: 19px;
+  padding-bottom: 22px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  border-bottom: 1px solid $color-gainsboro;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    padding-right: 254px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    padding: 0;
+  }
+}
+
+.section-programs__link {
+  position: relative;
+
+  align-self: start;
+  margin-top: auto;
+  padding-right: 57px;
+
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: $color-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-image: url("../img/background/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+
+  @media (min-width: $tablet-width) {
+    background-position: right 8px center;
+  }
+
+  &:hover {
+    transition: 0.3s all;
+    background-image: url("../img/background/arrow-active.svg");
+    background-position: right center;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
