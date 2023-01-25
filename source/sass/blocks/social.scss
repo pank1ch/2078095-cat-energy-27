@@ -1,0 +1,40 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 22px;
+  padding: 20px 0 17px;
+
+  list-style-type: none;
+
+  border-top: 1px solid $color-gainsboro;
+  border-bottom: 1px solid $color-gainsboro;
+
+  @media (min-width: $tablet-width) {
+    margin: -8px 0 0 24px;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.social__item {
+  padding-right: 24px;
+}
+
+.social__item:last-of-type {
+  padding-right: 0;
+}
+
+.social__link {
+  &:hover svg {
+    fill: $color-apple;
+  }
+
+  &:active svg {
+    fill: rgba($color-apple, 30%);
+  }
+}
+
+.social__svg {
+  fill: $color-dim-gray;
+}

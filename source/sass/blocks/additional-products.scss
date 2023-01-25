@@ -1,0 +1,136 @@
+.additional-products {
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.additional-products__line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+
+    width: 1000%;
+    height: 2px;
+
+    background-color: $color-apple;
+
+    @media (min-width: $tablet-width) {
+      top: 20px;
+      left: -100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 23px;
+    }
+  }
+}
+
+.additional-products__title {
+  width: max-content;
+  max-width: 90%;
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+  padding-right: 22px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  background-color: $color-white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    padding: 0 37px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+}
+
+.additional-products__list {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  padding-top: 13px;
+
+  list-style-type: none;
+
+  border-top: 1px solid $color-very-light-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+    padding: 12px 38px 0;
+
+    border: 1px solid $color-very-light-grey;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-top: 1px solid $color-very-light-grey;
+  }
+}
+
+.additional-products__item {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  border-bottom: 1px solid $color-very-light-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -39px;
+
+      width: calc(100% + 78px);
+      height: 1px;
+
+      background-color: $color-gainsboro;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 30px 6.6%;
+    grid-template-columns: auto 245px;
+  }
+}

@@ -1,0 +1,26 @@
+.button {
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+
+  font-weight: 400;
+  font-family: $ff-oswald;
+  text-align: center;
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $color-apple;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-limeade;
+  }
+
+  &:active {
+    color: rgba($color-white, 30%);
+
+    background-color: $color-limeade;
+  }
+}

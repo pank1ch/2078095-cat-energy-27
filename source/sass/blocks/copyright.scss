@@ -1,0 +1,42 @@
+.copyright__text {
+  align-self: center;
+  max-width: 200px;
+  margin: 0;
+  padding: 0;
+  padding-right: 29px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  max-width: 281px;
+  margin: 0 auto;
+
+  text-decoration: none;
+
+  &:hover svg {
+    fill: $color-apple;
+  }
+
+  &:active svg {
+    fill: $color-apple;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: baseline;
+    margin: 0;
+  }
+}
+
+.copyright__svg {
+  fill: $color-dim-gray;
+}

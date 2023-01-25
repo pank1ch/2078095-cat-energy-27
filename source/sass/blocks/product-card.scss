@@ -1,0 +1,265 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 19px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 34px 36px 39px;
+
+    background-color: $color-white-smoke;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 34px 36px 39px 40px;
+  }
+
+  &--more {
+    @media (min-width: $tablet-width) {
+      justify-content: space-between;
+
+      background-color: $color-white;
+      background-image: none;
+      border: 2px solid $color-white-smoke;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 23px;
+      padding: 21px 36px 39px;
+    }
+
+
+    .product-card__text:last-of-type {
+      margin: 0 0 24px;
+
+      @media (min-width: $tablet-width) {
+        margin: 0 auto 80px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin: 0 auto 60px;
+      }
+    }
+  }
+}
+
+.product-card__wrapper {
+  display: flex;
+  margin: 0 auto 12px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.product-card__block {
+  min-width: 142px;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.product-card__title {
+  align-items: center;
+  max-width: 76px;
+  margin: 0 0 15px;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-nero;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 150px;
+    margin: 0 auto 14px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 15px;
+    padding: 0 10px;
+
+    line-height: 21px;
+  }
+
+  &--more {
+    max-width: 210px;
+    margin: 0 auto 8px;
+
+    text-align: center;
+    color: $color-nero-1;
+
+    @media (min-width: $tablet-width) {
+      max-width: 155px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.product-card__list {
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $ff-lato;
+  text-align: center;
+  color: $color-charcoal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.product-card__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+}
+
+.product-card__link {
+  text-decoration: none;
+
+  &:hover,
+  &:hover .product-card__title {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:active .product-card__title {
+    opacity: 0.3;
+  }
+}
+
+.product-card__text {
+  margin: 0 0 10px 0;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $ff-lato;
+  text-align: center;
+  color: $color-charcoal;
+
+  @media (min-width: $tablet-width) {
+    width: 167px;
+    margin: 0 auto 10px auto;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-family: $ff-lato;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 10px auto;
+    padding: 0;
+  }
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  min-width: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+    margin: -108px auto 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 205px;
+    margin: -115px auto 41px;
+  }
+}
+
+.product-card__value {
+  min-width: 28px;
+}
+
+.product-card__button {
+  min-height: 40px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  &--more {
+    width: auto;
+
+    font-size: 16px;
+    color: $color-charcoal;
+
+    background-color: $color-white-smoke;
+
+    &:hover {
+      background-color: $color-whisper;
+    }
+
+    &:active {
+      color: rgba($color-charcoal, 0.3);
+
+      background-color: $color-whisper;
+    }
+  }
+}
+
+.product-card__plus {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 5px auto 23px;
+
+  background-color: $color-transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $color-light-gray;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin: 16px auto 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 29px auto 28px;
+  }
+}

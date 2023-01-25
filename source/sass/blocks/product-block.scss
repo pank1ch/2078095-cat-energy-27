@@ -1,0 +1,116 @@
+.product-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 11px;
+  padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    margin-bottom: 14px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    margin: 0;
+    padding: 12px 0 8px;
+
+    gap: 38px;
+    grid-template-columns: 2.5fr 1fr;
+  }
+}
+
+.product-block__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.product-block:last-of-type {
+  @media (min-width: $desktop-width) {
+    border-bottom: 1px solid $color-very-light-grey;
+  }
+}
+
+.product-block__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-nero;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    min-width: 170px;
+    padding: 0 15px 0 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.product-block__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0 15px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  @media (min-width: $tablet-width) {
+    margin: 16px 0 15px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+    min-width: 200px;
+    margin-left: auto;
+  }
+}
+
+.product-block__button {
+  width: auto;
+  min-height: 40px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $desktop-width) {
+    height: 40px;
+    max-height: max-content;
+    margin-top: 2px;
+    padding: 7px;
+
+    line-height: 27px;
+  }
+}
+
+.product-block__price {
+  @media (min-width: $tablet-width) {
+    margin-left: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+}
