@@ -107,12 +107,16 @@
 
   .form__field-input {
     @media (min-width: $desktop-width) {
-      padding: 9px 15px 10px 20px;
+      padding: 9px 45px 10px 20px;
     }
   }
 
   .form__field-input:focus + .form__field-icon {
     color: $color-apple;
+  }
+
+  .form__field-input:invalid:not(:placeholder-shown) + .form__field-icon {
+    color: rgb(255, 130, 130);
   }
 
   .form__field {
@@ -411,6 +415,7 @@
 
   &:invalid:not(:placeholder-shown) {
     outline: 2px solid rgb(255, 130, 130);
+    outline-offset: -2px;
   }
 
   @media (min-width: $tablet-width) {
